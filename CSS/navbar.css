@@ -1,0 +1,23 @@
+.navbar
+	{
+		background-color: #994d00 !important;
+		z-index: 500;
+	}
+.sticky
+	{
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+.navbar_cup
+	{
+		width: 30px;
+		height: 30px;
+	}
+
+.navbar a
+	{
+		font-weight: bold;
+		font-family: "Geneva", "Arial", "sans-serif";
+		font-size: large;
+	}

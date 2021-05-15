@@ -1,0 +1,30 @@
+.cenik_body
+	{
+		background-color: rgb(182, 109, 50);
+		/* border-right: 10px solid #f3f8f3; */
+		width: 80%;
+		background-size: 100% 100%;
+		margin: auto;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		padding-left: 5%;
+		font-weight: bold;
+		font-size: larger;
+	}
+
+.cenik_ikona
+	{
+		width: 100px;
+		height: 100px;
+		padding: 0px 10px 0px 10px;
+		margin-right: 10px;
+	}
+
+body
+	{
+		font-size: small;
+		font-family: "Geneva", "Arial", "sans-serif";
+		background-image: url(../obrazky/background.jpg);
+		background-size: 100% 100%;
+	
+	}

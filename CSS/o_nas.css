@@ -1,0 +1,21 @@
+.o_nas_body
+	{
+		background-image: url("../obrazky/o_nas_bg.jpg");
+		margin: auto;
+		background-repeat:repeat-y;
+		margin: auto;
+		width: 80%;
+		background-size: 100% 100%;
+	}
+
+.zamestnanec_profil
+	{
+		width: 150px;
+		height: 150px;
+	}
+
+.o_nas_body h2
+	{
+		font-size: large;
+		border-bottom: 1px solid black;
+	}

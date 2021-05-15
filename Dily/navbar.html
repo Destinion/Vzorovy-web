@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navbar</title>
+	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../CSS/navbar.css" !important>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"content="height=device-height, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+   <script type="text/javascript">
+    $(function ()
+      {
+        setNavigation();
+      });
+    function setNavigation()
+      {
+        var cesta=window.location.pathname;
+        cesta = cesta.replace(/\/$/, "");
+        cesta = decodeURIComponent(cesta);
+
+        $(".navbar a").each(function()
+        {
+          var href = $(this).attr('href');
+          if(cesta.substrings(0,href.length) ===href)
+            {
+              $(this).closest('li').addClass('active');
+            }
+        });
+      }
+	  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light position-sticky" id="navigace">
+  <a class="navbar-brand" href="../Homepage.php"><img class = "navbar_cup" src="../ikony/coffee.png" onmouseover="this.src='../ikony/cup.png'" onmouseout="this.src='../ikony/coffee.png'"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../Price_list.php">Ceník</a>
+      </li>
+      
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="../About.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          O nás
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://vzorovyweb/about.php#zamestnanec_1">Zaměstnanec 1</a>
+          <a class="dropdown-item" href="http://vzorovyweb/about.php#zamestnanec_2">Zaměstnanec 2</a>
+          <a class="dropdown-item" href="http://vzorovyweb/about.php#zamestnanec_3">Zaměstnanec 3</a>
+          <a class="dropdown-item" href="http://vzorovyweb/about.php#zamestnanec_4">Zaměstnanec 4</a>
+          <a class="dropdown-item" href="http://vzorovyweb/about.php#zamestnanec_5">Zaměstnanec 5</a>
+        </div> <!--Nezapomeň změnit to URL-->
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../Contact.php">Kontakt</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://skolahostivar.cz/">SŠAI</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Hledat" aria-label="Hledat">
+      <button class="btn btn-dark my-2 my-sm-0" type="submit">Hledat</button>
+    </form>
+  </div>
+  
+</nav>
+
+
+  <script src="../Skripty/Sticky_nav.js"></script>
+</body>
+</html>
